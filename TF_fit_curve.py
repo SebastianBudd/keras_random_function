@@ -1,10 +1,9 @@
-from tensorflow.keras import Sequential
-from tensorflow.keras import optimizers
-from tensorflow.keras.layers import Dense, Input
-from tensorflow.keras.models import Model
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+from tensorflow.keras import Sequential
+from tensorflow.keras import optimizers
+from tensorflow.keras.layers import Dense
 
 noisy_df = pd.read_csv('noisy_function.csv')
 print(noisy_df)
