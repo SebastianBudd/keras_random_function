@@ -71,6 +71,6 @@ df.to_csv(r'random_function.csv', index = False)
 
 d = {"x": x_noisy, "y": y_noisy}
 df_noisy = pd.DataFrame(d)
-df.to_csv(r'noisy_function.csv', index = False)
+df_noisy.to_csv(r'noisy_function.csv', index = False)
 
 
