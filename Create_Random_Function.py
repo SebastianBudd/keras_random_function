@@ -13,7 +13,7 @@ print('Packages successfully imported!')
 #  Create list of integers from 0 to 100
 integer_list = []
 count = 0
-while count != 101:
+while count != 1001:
     integer_list.append(count)
     count += 1
 
@@ -41,8 +41,8 @@ def f(x):
 X=[]
 Y=[]
 for x1 in integer_list:
-    X.append(x1/10)
-    Y.append(f(x1/10))
+    X.append(x1/100)
+    Y.append(f(x1/100))
 
 print("y = {} + {} x + {} x^2 + {} x^3 + {} sin(x) + {} cos(x * 3)".format(c_constant, c_linear, c_quadratic, c_cubic,
                                                                            c_sin, c_cos))
@@ -73,4 +73,5 @@ d = {"x": x_noisy, "y": y_noisy}
 df_noisy = pd.DataFrame(d)
 df_noisy.to_csv(r'noisy_function.csv', index=False)
 
+plt.show()
 
