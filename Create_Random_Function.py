@@ -10,7 +10,7 @@ from random import random
 
 print('Packages successfully imported!')
 
-#  Create list of integers from 0 to 100
+#  Create list of integers from 0 to 1000
 integer_list = []
 count = 0
 while count != 1001:

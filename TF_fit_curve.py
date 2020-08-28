@@ -44,15 +44,26 @@ print(model.summary())
 print('')
 
 sgd = optimizers.SGD(lr=1)
-model.compile(loss='mean_squared_error', optimizer=sgd)
+model.compile(loss='mean_squared_error', optimizer=sgd, metrics=['accuracy'])
 
 # Fit model
-model.fit(x1, y1, epochs=100000, verbose=True)
+history = model.fit(x1, y1, epochs=100000, verbose=True)
 
 # Predict values
 y3 = model.predict(x2)
 
+# Evaluate model
+
+results = model.evaluate(x2, y2)
+
+plt.plot(history.history['accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.savefig('accuracy.png')
+plt.clf()
+
 plt.scatter(x1, y1)  # Plot noisy data
 plt.plot(x2, y2, 'r')  # Plot true function
 plt.plot(x2, y3, 'g')  # Plot neural network predictions
-plt.show()
+plt.savefig('random_function.png')
